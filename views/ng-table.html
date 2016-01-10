@@ -1,0 +1,19 @@
+<div class="ng-cloak">
+    <div class="p-h-md p-v bg-white box-shadow pos-rlt">
+        <h3 class="no-margin">ng-table</h3>
+    </div>
+    <button ng-click="ngtable.tableParams.sorting({})" class="btn btn-default pull-right">Clear sorting</button>
+    <p>
+        <strong>Sorting:</strong> {{ngtable.tableParams.sorting()|json}}
+    </p>
+    <table ng-table="ngtable.tableParams" class="table table-bordered table-striped">
+        <tr ng-repeat="user in $data">
+            <td data-title="'Name'" sortable="'name'">
+                {{user.name}}
+            </td>
+            <td data-title="'Age'" sortable="'age'">
+                {{user.age}}
+            </td>
+        </tr>
+    </table>
+</div>

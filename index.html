@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="Scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="Scripts/angular-1.4.7/angular.js"></script>
+    <script src="Scripts/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="Scripts/oclazyload/dist/ocLazyLoad.min.js"></script>
+    <script src="js/app.config.js"></script>
+    <script src="js/oclazyload.config.js"></script>
+    <script src="js/route.config.js"></script>
+</head>
+<body>
+<div ng-app="templateApp">
+    <div>
+        <a href="#/default">主页</a>
+        <a href="#/uibootstrap" >ui-bootstrap</a>
+        <a href="#/ngtable">ng-table</a>
+        <a href="#/ngtree">angular-tree-control</a>
+    </div>
+    <div ui-view></div>
+</div>
+</body>
+</html>
