@@ -8,13 +8,9 @@ function routeFn($stateProvider,$urlRouterProvider){
     $stateProvider
     .state("default",{
         url:"/default",
-        views:{
-            "":{
-                templateUrl:"views/default.html",
-                controller:"defaultCtrl",
-                controllerAs:"default"
-            }
-        },
+        templateUrl:"views/default.html",
+        controller:"defaultCtrl",
+        controllerAs:"default",
         resolve:{
             deps:["$ocLazyLoad",function($ocLazyLoad){
                 return $ocLazyLoad.load("js/controllers/default.js");
@@ -23,11 +19,7 @@ function routeFn($stateProvider,$urlRouterProvider){
     })
     .state("uibootstrap",{
         url:"/uibootstrap",
-        views:{
-            "":{
-                templateUrl:"views/ui-bootstrap.html"
-            }
-        },
+        templateUrl:"views/ui-bootstrap.html",
         resolve:{
             deps:["$ocLazyLoad",function($ocLazyLoad){
                 return $ocLazyLoad.load("ui.bootstrap");
@@ -36,13 +28,9 @@ function routeFn($stateProvider,$urlRouterProvider){
     })
     .state("ngtable",{
         url:"/ngtable",
-        views:{
-            "":{
-                templateUrl:"views/ng-table.html",
-                controller:"ngTableCtrl",
-                controllerAs:"ngtable"
-            }
-        },
+        templateUrl:"views/ng-table.html",
+        controller:"ngTableCtrl",
+        controllerAs:"ngtable",
         resolve:{
             deps:["$ocLazyLoad",function($ocLazyLoad){
                 return $ocLazyLoad.load("ngTable").then(
@@ -55,13 +43,9 @@ function routeFn($stateProvider,$urlRouterProvider){
     })
     .state("ngtree",{
         url:"/ngtree",
-        views:{
-            "":{
-                templateUrl:"views/angular-tree-control.html",
-                controller:"ngTreeCtrl",
-                controllerAs:"ngtree"
-            }
-        },
+        templateUrl:"views/angular-tree-control.html",
+        controller:"ngTreeCtrl",
+        controllerAs:"ngtree",
         resolve:{
             deps:["$ocLazyLoad",function($ocLazyLoad){
                 return $ocLazyLoad.load("treeControl").then(
