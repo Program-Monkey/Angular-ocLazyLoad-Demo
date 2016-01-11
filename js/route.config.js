@@ -2,8 +2,8 @@
 *  cofig for ui.router
 */
 "use strict"
-tempApp.config(["$stateProvider","$urlRouterProvider","$locationProvider",routeFn]);
-function routeFn($stateProvider,$urlRouterProvider,$locationProvider){
+tempApp.config(["$stateProvider","$urlRouterProvider",routeFn]);
+function routeFn($stateProvider,$urlRouterProvider){
     $urlRouterProvider.otherwise("/default");
     $stateProvider
     .state("default",{
