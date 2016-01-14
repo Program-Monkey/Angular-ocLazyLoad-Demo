@@ -6,7 +6,6 @@
 tempApp
 .controller("ngTableCtrl",["$location","NgTableParams","$filter",ngTableCtrlFn]);
 function ngTableCtrlFn($location,NgTableParams,$filter){
-    var vm = this;
     //数据
     var data = [{ name: "Moroni", age: 50 },
                  { name: "Tiancum ", age: 43 },
@@ -25,7 +24,7 @@ function ngTableCtrlFn($location,NgTableParams,$filter){
                  { name: "Jacob", age: 27 },
                  { name: "Nephi", age: 29 },
                  { name: "Enos", age: 34 }];
-    vm.tableParams = new NgTableParams(    // 合并默认的配置和url参数
+    this.tableParams = new NgTableParams(    // 合并默认的配置和url参数
         angular.extend({
             page: 1,            // 第一页
             count: 10,          // 每页的数据量
