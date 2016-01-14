@@ -6,9 +6,8 @@
 tempApp
 .controller("ngTreeCtrl",ngTreeCtrlFn);
 function ngTreeCtrlFn(){
-    var vm = this;
     //树数据
-    vm.treeData = [
+    this.treeData = [
                 {
                     id:"1",
                     title:"标签1",
@@ -92,8 +91,8 @@ function ngTreeCtrlFn(){
                 }
             ];
     //树配置
-    vm.treeOptions = {
-      nodeChildren:"childList",
+    this.treeOptions = {
+        nodeChildren:"childList",
         dirSelectable:false
     };
 };
